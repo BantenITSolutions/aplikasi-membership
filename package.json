@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/endymuhardin/aplikasi-membership/issues"
   },
-  "homepage": "https://github.com/endymuhardin/aplikasi-membership"
+  "homepage": "https://github.com/endymuhardin/aplikasi-membership",
+  "dependencies": {
+    "redis-url": "^0.2.0",
+    "redis": "^0.10.1"
+  }
 }
