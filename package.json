@@ -1,0 +1,19 @@
+{
+  "name": "aplikasi-membership",
+  "version": "0.0.0",
+  "description": "Aplikasi Membership",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/endymuhardin/aplikasi-membership.git"
+  },
+  "author": "Endy Muhardin",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/endymuhardin/aplikasi-membership/issues"
+  },
+  "homepage": "https://github.com/endymuhardin/aplikasi-membership"
+}
