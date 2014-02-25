@@ -2,9 +2,10 @@
   "name": "aplikasi-membership",
   "version": "0.0.0",
   "description": "Aplikasi Membership",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js",
+    "debug": "node debug app.js"
   },
   "repository": {
     "type": "git",
@@ -18,6 +19,11 @@
   "homepage": "https://github.com/endymuhardin/aplikasi-membership",
   "dependencies": {
     "redis-url": "^0.2.0",
-    "redis": "^0.10.1"
+    "redis": "^0.10.1",
+    "sails": "0.9.9",
+    "grunt": "0.4.1",
+    "sails-disk": "~0.9.0",
+    "ejs": "0.8.4",
+    "optimist": "0.3.4"
   }
 }
