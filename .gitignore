@@ -51,3 +51,4 @@ config/local.js
 dist
 .sass-cache
 bower_components
+static

@@ -1,6 +1,8 @@
 // Generated on 2014-02-26 using generator-angular 0.7.1
 'use strict';
 
+var proxySnippet = require('grunt-connect-proxy/lib/utils').proxyRequest;
+
 // # Globbing
 // for performance reasons we're only matching one level down:
 // 'test/spec/{,*/}*.js'
@@ -22,7 +24,7 @@ module.exports = function (grunt) {
     yeoman: {
       // configurable paths
       app: require('./bower.json').appPath || 'app',
-      dist: 'dist'
+      dist: '../aplikasi-membership-server/static'
     },
 
     // Watches files for changes and runs tasks based on the changed files
@@ -65,13 +67,26 @@ module.exports = function (grunt) {
         hostname: 'localhost',
         livereload: 35729
       },
+      proxies: [
+        {
+          context: '/api',
+          host: 'localhost',
+          port: 1337
+        }
+      ],
       livereload: {
         options: {
           open: true,
           base: [
             '.tmp',
             '<%= yeoman.app %>'
-          ]
+          ],
+          middleware: function (connect) {
+            return [
+              proxySnippet,
+              connect.static(require('path').resolve('app'))
+            ];
+          }
         }
       },
       test: {
@@ -333,6 +348,7 @@ module.exports = function (grunt) {
     grunt.task.run([
       'clean:server',
       'bower-install',
+      'configureProxies',
       'concurrent:server',
       'autoprefixer',
       'connect:livereload',
