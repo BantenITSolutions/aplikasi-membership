@@ -43,3 +43,11 @@ nbproject
 # local config
 ########################
 config/local.js
+
+
+########################
+# client side apps
+########################
+dist
+.sass-cache
+bower_components
